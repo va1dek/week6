@@ -7,6 +7,8 @@
     box-sizing: border-box;
 }
 
+
+
 html {
     .roboto-regular {
     font-family: "roboto", sans-serif;
@@ -71,6 +73,61 @@ color: #151515;
 .movie-info-overview-title {
     text-transform: capitalize;
     letter-spacing: 0.1rem;
+}
+
+.container{
+    width: 75%;
+    text-align: center;
+    margin: 3rem auto;
+}
+
+.carousel{
+   max-width: 500px;
+   margin: 0 auto;
+   position: relative;
+    
+}
+
+.carousel img{
+    width: 100%;
+}
+
+
+.carousel .carousel__item,
+.carousel .carousel__item--hidden {
+   display: none; 
+   
+}
+.carousel .carousel__item--visible{
+    display: block;
+    animation: fadeIn 1s;
+}
+
+@keyframes fadeIn {
+    0%{opacity: 0;}
+    100%{opacity: 0.6;}
+}
+
+.carousel .carousel__actions{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+.carousel .carousel__actions button {
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: bold;
+    height: 50px;
+    width: 50px;
+    border: none;
+    background-color: rgba(190, 141, 81, 0.836);
+font-size: 2rem;
+color: #fff;
+margin: 1rem;
 }
 
 .movie-info-actions {
